@@ -30,7 +30,29 @@
                 <button id="testButton2" class="button" @click="changecolour">Change colour</button>
             </div>
         </div>
+
+        <hr style="margin: 20px 0;" />
+
+        <div>
+            <h3>Form</h3>
+            <form v-on:submit.prevent="saveForm">
+                <input v-model="form.email" type="text" name="email" placeholder="Your e-mail">
+
+                <input v-model="form.name" type="text" name="name" placeholder="Your name">
+
+                <button type="submit" name="submit">Save</button>
+            </form>
+        </div>
+
+        <div>
+            <div v-for="member in members" :key="member.email" class="member-card">
+                <p>{{ member.name }}</p>
+                <p>{{ member.email }}</p>
+            </div>
+        </div>
+
      </div>
+
 
     <!-- TODO: Import Vue app -->
     <script src="./index.js"></script>

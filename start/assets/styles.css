@@ -161,6 +161,15 @@ ul {
   list-style-type: none;
 }
 
+.member-card {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background: #c7c7c7;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;

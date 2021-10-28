@@ -12,7 +12,12 @@ const app = Vue.createApp({
             buttonpressed: {
                 notes: 'this button is pressed',
                 completed: false
-            }
+            },
+            form: {
+                email: '',
+                name: '',
+            },
+            members: [],
         }
     },
     // TODO: Add methods
@@ -29,6 +34,16 @@ const app = Vue.createApp({
             document.getElementById("testButton2").setAttribute("class","button1");
           else
             document.getElementById("testButton2").setAttribute("class","button");     
+        },
+
+        saveForm() {
+            this.members.push({
+                name: this.form.name,
+                email: this.form.email
+            })
+
+            this.form.name = ''
+            this.form.email = ''
         }
     }
 });
